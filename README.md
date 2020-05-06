@@ -1,4 +1,4 @@
-Contains set of analysis tools, used during .net core migration project.
+Contains set of analysis tools, used during .net core/ .net standard migration project from legacy .net framework.
 
 List of commands:
 * [graph](#graph)
