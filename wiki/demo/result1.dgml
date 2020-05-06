@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" DataVirtualized="false" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="AsyncUtils" Label="AsyncUtils" Category=".NETStandard,Version=v2.0" Count="6" IsReferenced="True" />
+    <Node Id="ContosoCentr.BillingMT.Base" Label="ContosoCentr.BillingMT.Base" Category=".NETStandard,Version=v2.0" Count="16" IsReferenced="True" />
+    <Node Id="ContosoCentr.BillingMT.BO" Label="ContosoCentr.BillingMT.BO" Category=".NETFramework,Version=v4.7.2" Count="17" IsReferenced="True" />
+    <Node Id="ContosoCentr.BillingMT.DAO" Label="ContosoCentr.BillingMT.DAO" Category=".NETStandard,Version=v2.0" Count="16" IsReferenced="True" />
+    <Node Id="ContosoCentr.BillingMT.ServiceImpl" Label="ContosoCentr.BillingMT.ServiceImpl" Category=".NETFramework,Version=v4.7.2" Count="18" IsReferenced="True" />
+    <Node Id="ContosoCentr.Cache.CacheService" Label="ContosoCentr.Cache.CacheService" Category=".NETFramework,Version=v4.7.2" Count="9" IsReferenced="True" />
+    <Node Id="ContosoCentr.Cache.CacheServiceDependency" Label="ContosoCentr.Cache.CacheServiceDependency" Category=".NETFramework,Version=v4.7.2" Count="7" IsReferenced="True" />
+    <Node Id="ContosoCentr.Cache.DataContract" Label="ContosoCentr.Cache.DataContract" Category=".NETStandard,Version=v2.0" Count="19" IsReferenced="True" />
+    <Node Id="ContosoCentr.Cache" Label="ContosoCentr.Cache" Category=".NETFramework,Version=v4.5.2" Count="4" IsReferenced="True" />
+    <Node Id="ContosoCentr.Cache.InMemoryCache" Label="ContosoCentr.Cache.InMemoryCache" Category=".NETStandard,Version=v2.0" Count="24" IsReferenced="True" />
+    <Node Id="ContosoCentr.CacheClient.DataContract" Label="ContosoCentr.CacheClient.DataContract" Category=".NETStandard,Version=v2.0" Count="18" IsReferenced="True" />
+    <Node Id="ContosoCentr.CacheClient.Implementation" Label="ContosoCentr.CacheClient.Implementation" Category=".NETStandard,Version=v2.0" Count="9" IsReferenced="True" />
+    <Node Id="ContosoCentr.Common.Client" Label="ContosoCentr.Common.Client" Category=".NETStandard,Version=v2.0" Count="12" IsReferenced="True" />
+    <Node Id="ContosoCentr.Common.Core" Label="ContosoCentr.Common.Core" Category=".NETStandard,Version=v2.0" Count="38" IsReferenced="True" />
+    <Node Id="ContosoCentr.Common" Label="ContosoCentr.Common" Category=".NETFramework,Version=v4.7.2" Count="11" IsReferenced="True" />
+    <Node Id="ContosoCentr.Common.NetStandard" Label="ContosoCentr.Common.NetStandard" Category=".NETStandard,Version=v2.0" Count="40" IsReferenced="True" />
+    <Node Id="ContosoCentr.MT.Base" Label="ContosoCentr.MT.Base" Category=".NETStandard,Version=v2.0" Count="28" IsReferenced="True" />
+    <Node Id="ContosoCentr.MT.Base.Extensions" Label="ContosoCentr.MT.Base.Extensions" Category=".NETFramework,Version=v4.7.2" Count="8" IsReferenced="True" />
+    <Node Id="ContosoCentr.MT.BO" Label="ContosoCentr.MT.BO" Category=".NETFramework,Version=v4.7.2" Count="21" IsReferenced="True" />
+    <Node Id="ContosoCentr.MT.BO.NetStandard" Label="ContosoCentr.MT.BO.NetStandard" Category=".NETStandard,Version=v2.0" Count="13" IsReferenced="True" />
+    <Node Id="ContosoCentr.MT.Dao" Label="ContosoCentr.MT.Dao" Category=".NETStandard,Version=v2.0" Count="26" IsReferenced="True" />
+    <Node Id="ContosoCentr.MT.DAO.Extensions" Label="ContosoCentr.MT.DAO.Extensions" Category=".NETFramework,Version=v4.7.2" IsReferenced="False" />
+    <Node Id="ContosoCentr.MT.DataContract" Label="ContosoCentr.MT.DataContract" Category=".NETStandard,Version=v2.0" Count="28" IsReferenced="True" />
+    <Node Id="ContosoCentr.MT.DataContract.Extensions" Label="ContosoCentr.MT.DataContract.Extensions" Category=".NETFramework,Version=v4.7.2" Count="4" IsReferenced="True" />
+    <Node Id="ContosoCentr.MT.DomainData" Label="ContosoCentr.MT.DomainData" Category=".NETStandard,Version=v2.0" Count="16" IsReferenced="True" />
+    <Node Id="ContosoCentr.MT.EntityDataAccessor" Label="ContosoCentr.MT.EntityDataAccessor" Category=".NETStandard,Version=v2.0" Count="14" IsReferenced="True" />
+    <Node Id="ContosoCentr.MT.EntityDataAccessor.Extensions" Label="ContosoCentr.MT.EntityDataAccessor.Extensions" Category="UnknownFramework" IsReferenced="False" />
+    <Node Id="ContosoCentr.MT.EO" Label="ContosoCentr.MT.EO" Category=".NETFramework,Version=v4.7.2" Count="39" IsReferenced="True" />
+    <Node Id="ContosoCentr.MT.EO.NetStandard" Label="ContosoCentr.MT.EO.NetStandard" Category=".NETStandard,Version=v2.0" Count="19" IsReferenced="True" />
+    <Node Id="ContosoCentr.MT.Mao" Label="ContosoCentr.MT.Mao" Category=".NETFramework,Version=v4.7.2" Count="10" IsReferenced="True" />
+    <Node Id="ContosoCentr.MT.PortabilityExtensions" Label="ContosoCentr.MT.PortabilityExtensions" Category=".NETFramework,Version=v4.7.2" Count="12" IsReferenced="True" />
+    <Node Id="ContosoCentr.MT.Proxy" Label="ContosoCentr.MT.Proxy" Category=".NETStandard,Version=v2.0" Count="1" IsReferenced="True" />
+    <Node Id="ContosoCentr.MT.Service.CoreDependencies" Label="ContosoCentr.MT.Service.CoreDependencies" Category=".NETStandard,Version=v2.0" Count="20" IsReferenced="True" />
+    <Node Id="ContosoCentr.MT.ServiceImpl" Label="ContosoCentr.MT.ServiceImpl" Category=".NETFramework,Version=v4.7.2" Count="36" IsReferenced="True" />
+    <Node Id="ContosoCentr.MT.STS" Label="ContosoCentr.MT.STS" Category=".NETFramework,Version=v4.7.2" Count="15" IsReferenced="True" />
+    <Node Id="ContosoCentr.MT.STSCommon" Label="ContosoCentr.MT.STSCommon" Category=".NETFramework,Version=v4.7.2" Count="4" IsReferenced="True" />
+    <Node Id="ContosoCentr.SecurityDataContract" Label="ContosoCentr.SecurityDataContract" Category=".NETStandard,Version=v2.0" Count="27" IsReferenced="True" />
+    <Node Id="ContosoCentr.SecurityDataProvider" Label="ContosoCentr.SecurityDataProvider" Category=".NETStandard,Version=v2.0" Count="21" IsReferenced="True" />
+    <Node Id="ContosoCentr.SecurityService" Label="ContosoCentr.SecurityService" Category=".NETFramework,Version=v4.7.2" Count="19" IsReferenced="True" />
+    <Node Id="ContosoCentr.Shared.DynamicConfigurationManager" Label="ContosoCentr.Shared.DynamicConfigurationManager" Category=".NETFramework,Version=v4.7.2" Count="2" IsReferenced="True" />
+    <Node Id="ContosoCentr.Shared.DynamicConfigurationManager.NetStandard" Label="ContosoCentr.Shared.DynamicConfigurationManager.NetStandard" Category=".NETStandard,Version=v2.0" Count="4" IsReferenced="True" />
+    <Node Id="ContosoCentr.Shared.Import" Label="ContosoCentr.Shared.Import" Category=".NETStandard,Version=v2.0" Count="6" IsReferenced="True" />
+    <Node Id="ContosoCentr.Shared.InstrumentationLibrary" Label="ContosoCentr.Shared.InstrumentationLibrary" Category=".NETStandard,Version=v2.0" Count="17" IsReferenced="True" />
+    <Node Id="ContosoCentr.Shared.InstrumentationLibrary.Extension" Label="ContosoCentr.Shared.InstrumentationLibrary.Extension" Category=".NETFramework,Version=v4.7.2" Count="7" IsReferenced="True" />
+    <Node Id="ContosoCentr.Shared.MinimalPerfectHash" Label="ContosoCentr.Shared.MinimalPerfectHash" Category=".NETStandard,Version=v2.0" Count="1" IsReferenced="True" />
+    <Node Id="ContosoCentr.UserSecurityInternalClient" Label="ContosoCentr.UserSecurityInternalClient" Category=".NETStandard,Version=v2.0" Count="9" IsReferenced="True" />
+    <Node Id="ContosoCentr.WCFServiceHelper" Label="ContosoCentr.WCFServiceHelper" Category=".NETStandard,Version=v2.0" Count="3" IsReferenced="True" />
+    <Node Id="CommonUtils" Label="CommonUtils" Category=".NETStandard,Version=v2.0" Count="1" IsReferenced="True" />
+    <Node Id="DataDistributorService" Label="DataDistributorService" Category=".NETStandard,Version=v2.0" Count="11" IsReferenced="True" />
+    <Node Id="DataDistributorService.Extensions" Label="DataDistributorService.Extensions" Category=".NETFramework,Version=v4.7.2" Count="6" IsReferenced="True" />
+    <Node Id="EmailDeliveryService.DataContract" Label="EmailDeliveryService.DataContract" Category=".NETStandard,Version=v2.0" Count="3" IsReferenced="True" />
+    <Node Id="MetadataServiceClient" Label="MetadataServiceClient" Category=".NETStandard,Version=v2.0" Count="6" IsReferenced="True" />
+    <Node Id="Microsoft.AdCenter.Common.MetricClient" Label="Microsoft.AdCenter.Common.MetricClient" Category=".NETStandard,Version=v2.0" Count="5" IsReferenced="True" />
+    <Node Id="Microsoft.AdCenter.Shared.JobQueue" Label="Microsoft.AdCenter.Shared.JobQueue" Category=".NETStandard,Version=v2.0" Count="2" IsReferenced="True" />
+    <Node Id="Microsoft.AdCenter.Shared.Logging.ClientLibrary" Label="Microsoft.AdCenter.Shared.Logging.ClientLibrary" Category=".NETStandard,Version=v2.0" Count="17" IsReferenced="True" />
+    <Node Id="Microsoft.AdCenter.Shared.Logging.Contract" Label="Microsoft.AdCenter.Shared.Logging.Contract" Category=".NETStandard,Version=v2.0" Count="18" IsReferenced="True" />
+    <Node Id="Microsoft.AdCenter.Shared.Logging.Facade" Label="Microsoft.AdCenter.Shared.Logging.Facade" Category=".NETStandard,Version=v2.0" Count="5" IsReferenced="True" />
+    <Node Id="Microsoft.AdCenter.Shared.Logging.KustoLogSink" Label="Microsoft.AdCenter.Shared.Logging.KustoLogSink" Category=".NETStandard,Version=v2.0" Count="4" IsReferenced="True" />
+    <Node Id="Microsoft.Advertiser.CampaignManagement.BusinessRules" Label="Microsoft.Advertiser.CampaignManagement.BusinessRules" Category=".NETStandard,Version=v2.0" Count="1" IsReferenced="True" />
+    <Node Id="Microsoft.AspNetCore.Authentication.Abstractions" Label="Microsoft.AspNetCore.Authentication.Abstractions" Category=".NETStandard,Version=v2.0" Count="2" IsReferenced="True" />
+    <Node Id="Microsoft.AspNetCore.Authentication.Core" Label="Microsoft.AspNetCore.Authentication.Core" Category=".NETStandard,Version=v2.0" Count="2" IsReferenced="True" />
+    <Node Id="Microsoft.AspNetCore.Connections.Abstractions" Label="Microsoft.AspNetCore.Connections.Abstractions" Category=".NETStandard,Version=v2.0" Count="1" IsReferenced="False" />
+    <Node Id="Microsoft.AspNetCore.Diagnostics.Abstractions" Label="Microsoft.AspNetCore.Diagnostics.Abstractions" Category=".NETStandard,Version=v2.0" Count="1" IsReferenced="True" />
+    <Node Id="Microsoft.AspNetCore.Diagnostics" Label="Microsoft.AspNetCore.Diagnostics" Category=".NETStandard,Version=v2.0" Count="4" IsReferenced="False" />
+    <Node Id="Microsoft.AspNetCore" Label="Microsoft.AspNetCore" Category=".NETStandard,Version=v2.0" Count="3" IsReferenced="False" />
+    <Node Id="Microsoft.AspNetCore.HostFiltering" Label="Microsoft.AspNetCore.HostFiltering" Category=".NETStandard,Version=v2.0" Count="2" IsReferenced="True" />
+    <Node Id="Microsoft.AspNetCore.Http" Label="Microsoft.AspNetCore.Http" Category=".NETStandard,Version=v2.0" Count="3" IsReferenced="False" />
+    <Node Id="Microsoft.AspNetCore.Http.Extensions" Label="Microsoft.AspNetCore.Http.Extensions" Category=".NETStandard,Version=v2.0" Count="3" IsReferenced="True" />
+    <Node Id="Microsoft.AspNetCore.Http.Features" Label="Microsoft.AspNetCore.Http.Features" Category=".NETStandard,Version=v2.0" Count="10" IsReferenced="True" />
+    <Node Id="Microsoft.AspNetCore.HttpOverrides" Label="Microsoft.AspNetCore.HttpOverrides" Category=".NETStandard,Version=v2.0" Count="2" IsReferenced="True" />
+    <Node Id="Microsoft.AspNetCore.Routing.Abstractions" Label="Microsoft.AspNetCore.Routing.Abstractions" Category=".NETStandard,Version=v2.0" Count="2" IsReferenced="True" />
+    <Node Id="Microsoft.AspNetCore.Routing" Label="Microsoft.AspNetCore.Routing" Category=".NETStandard,Version=v2.0" Count="3" IsReferenced="True" />
+    <Node Id="Microsoft.AspNetCore.Server.IISIntegration" Label="Microsoft.AspNetCore.Server.IISIntegration" Category=".NETStandard,Version=v2.0" Count="6" IsReferenced="True" />
+    <Node Id="Microsoft.AspNetCore.WebSockets" Label="Microsoft.AspNetCore.WebSockets" Category=".NETStandard,Version=v2.0" Count="1" IsReferenced="False" />
+    <Node Id="Microsoft.AspNetCore.WebUtilities" Label="Microsoft.AspNetCore.WebUtilities" Category=".NETStandard,Version=v2.0" Count="3" IsReferenced="True" />
+    <Node Id="Microsoft.Bcl.AsyncInterfaces" Label="Microsoft.Bcl.AsyncInterfaces" Category="UnknownFramework" IsReferenced="False" />
+    <Node Id="Microsoft.Fabrikm.Apps.Encryption" Label="Microsoft.Fabrikm.Apps.Encryption" Category=".NETStandard,Version=v2.0" Count="5" IsReferenced="True" />
+    <Node Id="Microsoft.Fabrikm.Azure.BlobStorage" Label="Microsoft.Fabrikm.Azure.BlobStorage" Category=".NETStandard,Version=v2.0" Count="3" IsReferenced="True" />
+    <Node Id="Microsoft.Fabrikm.Billing.Daos" Label="Microsoft.Fabrikm.Billing.Daos" Category=".NETStandard,Version=v2.0" Count="4" IsReferenced="True" />
+    <Node Id="Microsoft.Fabrikm.Billing.Daos.Entity" Label="Microsoft.Fabrikm.Billing.Daos.Entity" Category=".NETStandard,Version=v2.0" Count="3" IsReferenced="True" />
+    <Node Id="Microsoft.Fabrikm.Utils" Label="Microsoft.Fabrikm.Utils" Category=".NETStandard,Version=v2.0" Count="7" IsReferenced="True" />
+    <Node Id="Microsoft.Net.Http.Headers" Label="Microsoft.Net.Http.Headers" Category=".NETStandard,Version=v2.0" Count="4" IsReferenced="True" />
+    <Node Id="Shared.Metadata.PartitionSupport" Label="Shared.Metadata.PartitionSupport" Category=".NETStandard,Version=v2.0" Count="23" IsReferenced="True" />
+    <Node Id="WcfClientHelper" Label="WcfClientHelper" Category=".NETStandard,Version=v2.0" Count="2" IsReferenced="True" />
+    <Node Id="ContosoCentr.MT.Service" Label="ContosoCentr.MT.Service" Category=".NETFramework,Version=v4.7.2" Count="26" IsReferenced="False" />
+  </Nodes>
+  <Links>
+    <Link Source="AsyncUtils" Target="Microsoft.AdCenter.Shared.Logging.Contract" />
+    <Link Source="AsyncUtils" Target="CommonUtils" />
+    <Link Source="ContosoCentr.BillingMT.Base" Target="ContosoCentr.Common.NetStandard" />
+    <Link Source="ContosoCentr.BillingMT.Base" Target="ContosoCentr.MT.DataContract" />
+    <Link Source="ContosoCentr.BillingMT.Base" Target="ContosoCentr.Common.Client" />
+    <Link Source="ContosoCentr.BillingMT.Base" Target="ContosoCentr.Shared.InstrumentationLibrary" />
+    <Link Source="ContosoCentr.BillingMT.Base" Target="Shared.Metadata.PartitionSupport" />
+    <Link Source="ContosoCentr.BillingMT.Base" Target="ContosoCentr.SecurityDataContract" />
+    <Link Source="ContosoCentr.BillingMT.Base" Target="ContosoCentr.Common.Core" />
+    <Link Source="ContosoCentr.BillingMT.Base" Target="ContosoCentr.MT.Base" />
+    <Link Source="ContosoCentr.BillingMT.Base" Target="Microsoft.AdCenter.Shared.Logging.Contract" />
+    <Link Source="ContosoCentr.BillingMT.BO" Target="ContosoCentr.MT.DataContract" />
+    <Link Source="ContosoCentr.BillingMT.BO" Target="ContosoCentr.BillingMT.DAO" />
+    <Link Source="ContosoCentr.BillingMT.BO" Target="ContosoCentr.SecurityDataContract" />
+    <Link Source="ContosoCentr.BillingMT.BO" Target="ContosoCentr.MT.Base" />
+    <Link Source="ContosoCentr.BillingMT.BO" Target="ContosoCentr.BillingMT.Base" />
+    <Link Source="ContosoCentr.BillingMT.BO" Target="ContosoCentr.MT.EO" />
+    <Link Source="ContosoCentr.BillingMT.BO" Target="ContosoCentr.Common.NetStandard" />
+    <Link Source="ContosoCentr.BillingMT.BO" Target="ContosoCentr.Common.Core" />
+    <Link Source="ContosoCentr.BillingMT.BO" Target="Microsoft.AdCenter.Shared.Logging.ClientLibrary" />
+    <Link Source="ContosoCentr.BillingMT.BO" Target="ContosoCentr.Cache.InMemoryCache" />
+    <Link Source="ContosoCentr.BillingMT.BO" Target="ContosoCentr.Cache.DataContract" />
+    <Link Source="ContosoCentr.BillingMT.BO" Target="ContosoCentr.MT.Dao" />
+    <Link Source="ContosoCentr.BillingMT.BO" Target="ContosoCentr.CacheClient.DataContract" />
+    <Link Source="ContosoCentr.BillingMT.BO" Target="ContosoCentr.SecurityDataProvider" />
+    <Link Source="ContosoCentr.BillingMT.BO" Target="ContosoCentr.MT.EO.NetStandard" />
+    <Link Source="ContosoCentr.BillingMT.BO" Target="ContosoCentr.MT.EntityDataAccessor" />
+    <Link Source="ContosoCentr.BillingMT.DAO" Target="ContosoCentr.BillingMT.Base" />
+    <Link Source="ContosoCentr.BillingMT.DAO" Target="ContosoCentr.MT.DataContract" />
+    <Link Source="ContosoCentr.BillingMT.DAO" Target="ContosoCentr.SecurityDataContract" />
+    <Link Source="ContosoCentr.BillingMT.DAO" Target="ContosoCentr.Common.NetStandard" />
+    <Link Source="ContosoCentr.BillingMT.DAO" Target="Shared.Metadata.PartitionSupport" />
+    <Link Source="ContosoCentr.BillingMT.DAO" Target="Microsoft.Fabrikm.Billing.Daos" />
+    <Link Source="ContosoCentr.BillingMT.DAO" Target="Microsoft.Fabrikm.Billing.Daos.Entity" />
+    <Link Source="ContosoCentr.BillingMT.DAO" Target="ContosoCentr.Common.Core" />
+    <Link Source="ContosoCentr.BillingMT.DAO" Target="ContosoCentr.MT.Base" />
+    <Link Source="ContosoCentr.BillingMT.DAO" Target="ContosoCentr.Shared.InstrumentationLibrary" />
+    <Link Source="ContosoCentr.BillingMT.DAO" Target="Microsoft.AdCenter.Shared.Logging.Contract" />
+    <Link Source="ContosoCentr.BillingMT.DAO" Target="ContosoCentr.MT.DomainData" />
+    <Link Source="ContosoCentr.BillingMT.ServiceImpl" Target="Microsoft.Fabrikm.Apps.Encryption" />
+    <Link Source="ContosoCentr.BillingMT.ServiceImpl" Target="ContosoCentr.Common.NetStandard" />
+    <Link Source="ContosoCentr.BillingMT.ServiceImpl" Target="Shared.Metadata.PartitionSupport" />
+    <Link Source="ContosoCentr.BillingMT.ServiceImpl" Target="ContosoCentr.Common" />
+    <Link Source="ContosoCentr.BillingMT.ServiceImpl" Target="ContosoCentr.MT.DataContract" />
+    <Link Source="ContosoCentr.BillingMT.ServiceImpl" Target="ContosoCentr.MT.Base" />
+    <Link Source="ContosoCentr.BillingMT.ServiceImpl" Target="ContosoCentr.Common.Core" />
+    <Link Source="ContosoCentr.BillingMT.ServiceImpl" Target="ContosoCentr.Shared.InstrumentationLibrary" />
+    <Link Source="ContosoCentr.BillingMT.ServiceImpl" Target="ContosoCentr.BillingMT.Base" />
+    <Link Source="ContosoCentr.BillingMT.ServiceImpl" Target="ContosoCentr.Shared.InstrumentationLibrary.Extension" />
+    <Link Source="ContosoCentr.BillingMT.ServiceImpl" Target="EmailDeliveryService.DataContract" />
+    <Link Source="ContosoCentr.BillingMT.ServiceImpl" Target="ContosoCentr.BillingMT.BO" />
+    <Link Source="ContosoCentr.BillingMT.ServiceImpl" Target="Microsoft.AdCenter.Shared.Logging.Contract" />
+    <Link Source="ContosoCentr.BillingMT.ServiceImpl" Target="ContosoCentr.MT.EO" />
+    <Link Source="ContosoCentr.BillingMT.ServiceImpl" Target="ContosoCentr.SecurityDataContract" />
+    <Link Source="ContosoCentr.BillingMT.ServiceImpl" Target="ContosoCentr.Common.Client" />
+    <Link Source="ContosoCentr.BillingMT.ServiceImpl" Target="Microsoft.AdCenter.Shared.Logging.ClientLibrary" />
+    <Link Source="ContosoCentr.Cache.CacheService" Target="ContosoCentr.Common" />
+    <Link Source="ContosoCentr.Cache.CacheService" Target="ContosoCentr.CacheClient.DataContract" />
+    <Link Source="ContosoCentr.Cache.CacheService" Target="ContosoCentr.MT.Base.Extensions" />
+    <Link Source="ContosoCentr.Cache.CacheService" Target="ContosoCentr.Cache.DataContract" />
+    <Link Source="ContosoCentr.Cache.CacheService" Target="ContosoCentr.Common.NetStandard" />
+    <Link Source="ContosoCentr.Cache.CacheService" Target="ContosoCentr.Common.Core" />
+    <Link Source="ContosoCentr.Cache.CacheService" Target="ContosoCentr.WCFServiceHelper" />
+    <Link Source="ContosoCentr.Cache.CacheService" Target="ContosoCentr.SecurityDataContract" />
+    <Link Source="ContosoCentr.Cache.CacheServiceDependency" Target="ContosoCentr.Common" />
+    <Link Source="ContosoCentr.Cache.CacheServiceDependency" Target="Shared.Metadata.PartitionSupport" />
+    <Link Source="ContosoCentr.Cache.CacheServiceDependency" Target="DataDistributorService" />
+    <Link Source="ContosoCentr.Cache.CacheServiceDependency" Target="ContosoCentr.CacheClient.DataContract" />
+    <Link Source="ContosoCentr.Cache.CacheServiceDependency" Target="ContosoCentr.Cache.InMemoryCache" />
+    <Link Source="ContosoCentr.Cache.CacheServiceDependency" Target="DataDistributorService.Extensions" />
+    <Link Source="ContosoCentr.Cache.DataContract" Target="ContosoCentr.Common.Core" />
+    <Link Source="ContosoCentr.Cache.DataContract" Target="ContosoCentr.SecurityDataContract" />
+    <Link Source="ContosoCentr.Cache.DataContract" Target="ContosoCentr.Common.NetStandard" />
+    <Link Source="ContosoCentr.Cache.InMemoryCache" Target="ContosoCentr.Common.NetStandard" />
+    <Link Source="ContosoCentr.Cache.InMemoryCache" Target="ContosoCentr.Cache.DataContract" />
+    <Link Source="ContosoCentr.Cache.InMemoryCache" Target="ContosoCentr.SecurityDataContract" />
+    <Link Source="ContosoCentr.Cache.InMemoryCache" Target="Shared.Metadata.PartitionSupport" />
+    <Link Source="ContosoCentr.Cache.InMemoryCache" Target="ContosoCentr.Shared.Import" />
+    <Link Source="ContosoCentr.Cache.InMemoryCache" Target="ContosoCentr.MT.Base" />
+    <Link Source="ContosoCentr.Cache.InMemoryCache" Target="DataDistributorService" />
+    <Link Source="ContosoCentr.Cache.InMemoryCache" Target="ContosoCentr.CacheClient.DataContract" />
+    <Link Source="ContosoCentr.Cache.InMemoryCache" Target="ContosoCentr.MT.DataContract" />
+    <Link Source="ContosoCentr.Cache.InMemoryCache" Target="ContosoCentr.Common.Core" />
+    <Link Source="ContosoCentr.Cache.InMemoryCache" Target="ContosoCentr.Cache" />
+    <Link Source="ContosoCentr.Cache.InMemoryCache" Target="ContosoCentr.Shared.InstrumentationLibrary" />
+    <Link Source="ContosoCentr.Cache.InMemoryCache" Target="ContosoCentr.MT.DomainData" />
+    <Link Source="ContosoCentr.CacheClient.DataContract" Target="ContosoCentr.Cache.DataContract" />
+    <Link Source="ContosoCentr.CacheClient.DataContract" Target="ContosoCentr.SecurityDataContract" />
+    <Link Source="ContosoCentr.CacheClient.DataContract" Target="ContosoCentr.MT.DataContract" />
+    <Link Source="ContosoCentr.CacheClient.DataContract" Target="ContosoCentr.Common.Core" />
+    <Link Source="ContosoCentr.CacheClient.Implementation" Target="ContosoCentr.Cache.DataContract" />
+    <Link Source="ContosoCentr.CacheClient.Implementation" Target="ContosoCentr.WCFServiceHelper" />
+    <Link Source="ContosoCentr.CacheClient.Implementation" Target="ContosoCentr.CacheClient.DataContract" />
+    <Link Source="ContosoCentr.CacheClient.Implementation" Target="ContosoCentr.SecurityDataContract" />
+    <Link Source="ContosoCentr.CacheClient.Implementation" Target="ContosoCentr.MT.DataContract" />
+    <Link Source="ContosoCentr.CacheClient.Implementation" Target="ContosoCentr.Common.Core" />
+    <Link Source="ContosoCentr.CacheClient.Implementation" Target="ContosoCentr.Common.NetStandard" />
+    <Link Source="ContosoCentr.Common.Client" Target="ContosoCentr.Common.Core" />
+    <Link Source="ContosoCentr.Common.Client" Target="ContosoCentr.Common.NetStandard" />
+    <Link Source="ContosoCentr.Common.Client" Target="ContosoCentr.Shared.InstrumentationLibrary" />
+    <Link Source="ContosoCentr.Common" Target="ContosoCentr.Common.NetStandard" />
+    <Link Source="ContosoCentr.Common" Target="ContosoCentr.Common.Core" />
+    <Link Source="ContosoCentr.Common.NetStandard" Target="ContosoCentr.Common.Core" />
+    <Link Source="ContosoCentr.Common.NetStandard" Target="ContosoCentr.Shared.InstrumentationLibrary" />
+    <Link Source="ContosoCentr.Common.NetStandard" Target="ContosoCentr.Shared.MinimalPerfectHash" />
+    <Link Source="ContosoCentr.Common.NetStandard" Target="Microsoft.AdCenter.Shared.Logging.Contract" />
+    <Link Source="ContosoCentr.Common.NetStandard" Target="Microsoft.AdCenter.Shared.Logging.ClientLibrary" />
+    <Link Source="ContosoCentr.Common.NetStandard" Target="Shared.Metadata.PartitionSupport" />
+    <Link Source="ContosoCentr.Common.NetStandard" Target="Microsoft.AdCenter.Shared.Logging.KustoLogSink" />
+    <Link Source="ContosoCentr.MT.Base" Target="ContosoCentr.SecurityDataContract" />
+    <Link Source="ContosoCentr.MT.Base" Target="ContosoCentr.MT.DataContract" />
+    <Link Source="ContosoCentr.MT.Base" Target="ContosoCentr.Shared.InstrumentationLibrary" />
+    <Link Source="ContosoCentr.MT.Base" Target="ContosoCentr.Common.NetStandard" />
+    <Link Source="ContosoCentr.MT.Base" Target="Shared.Metadata.PartitionSupport" />
+    <Link Source="ContosoCentr.MT.Base" Target="ContosoCentr.Common.Client" />
+    <Link Source="ContosoCentr.MT.Base" Target="ContosoCentr.Common.Core" />
+    <Link Source="ContosoCentr.MT.Base" Target="Microsoft.AdCenter.Shared.Logging.ClientLibrary" />
+    <Link Source="ContosoCentr.MT.Base" Target="Microsoft.AdCenter.Shared.Logging.Contract" />
+    <Link Source="ContosoCentr.MT.Base.Extensions" Target="ContosoCentr.Common.NetStandard" />
+    <Link Source="ContosoCentr.MT.Base.Extensions" Target="ContosoCentr.MT.DataContract" />
+    <Link Source="ContosoCentr.MT.Base.Extensions" Target="ContosoCentr.SecurityDataContract" />
+    <Link Source="ContosoCentr.MT.Base.Extensions" Target="ContosoCentr.MT.Base" />
+    <Link Source="ContosoCentr.MT.Base.Extensions" Target="ContosoCentr.Common.Core" />
+    <Link Source="ContosoCentr.MT.BO" Target="ContosoCentr.MT.BO.NetStandard" />
+    <Link Source="ContosoCentr.MT.BO" Target="ContosoCentr.MT.DataContract" />
+    <Link Source="ContosoCentr.MT.BO" Target="ContosoCentr.MT.EO" />
+    <Link Source="ContosoCentr.MT.BO" Target="ContosoCentr.Common.NetStandard" />
+    <Link Source="ContosoCentr.MT.BO" Target="ContosoCentr.MT.Base" />
+    <Link Source="ContosoCentr.MT.BO" Target="ContosoCentr.Common.Core" />
+    <Link Source="ContosoCentr.MT.BO" Target="ContosoCentr.MT.EntityDataAccessor" />
+    <Link Source="ContosoCentr.MT.BO" Target="ContosoCentr.Cache.DataContract" />
+    <Link Source="ContosoCentr.MT.BO" Target="ContosoCentr.CacheClient.DataContract" />
+    <Link Source="ContosoCentr.MT.BO" Target="ContosoCentr.MT.Dao" />
+    <Link Source="ContosoCentr.MT.BO" Target="ContosoCentr.SecurityDataContract" />
+    <Link Source="ContosoCentr.MT.BO" Target="ContosoCentr.Cache.InMemoryCache" />
+    <Link Source="ContosoCentr.MT.BO" Target="Microsoft.AdCenter.Shared.Logging.ClientLibrary" />
+    <Link Source="ContosoCentr.MT.BO" Target="ContosoCentr.MT.EO.NetStandard" />
+    <Link Source="ContosoCentr.MT.BO" Target="ContosoCentr.MT.STSCommon" />
+    <Link Source="ContosoCentr.MT.BO" Target="ContosoCentr.SecurityDataProvider" />
+    <Link Source="ContosoCentr.MT.BO" Target="DataDistributorService" />
+    <Link Source="ContosoCentr.MT.BO" Target="ContosoCentr.MT.DomainData" />
+    <Link Source="ContosoCentr.MT.BO" Target="ContosoCentr.MT.STS" />
+    <Link Source="ContosoCentr.MT.BO" Target="ContosoCentr.MT.Mao" />
+    <Link Source="ContosoCentr.MT.BO.NetStandard" Target="ContosoCentr.SecurityDataContract" />
+    <Link Source="ContosoCentr.MT.BO.NetStandard" Target="ContosoCentr.MT.DataContract" />
+    <Link Source="ContosoCentr.MT.BO.NetStandard" Target="ContosoCentr.MT.Base" />
+    <Link Source="ContosoCentr.MT.BO.NetStandard" Target="ContosoCentr.Common.NetStandard" />
+    <Link Source="ContosoCentr.MT.BO.NetStandard" Target="ContosoCentr.Common.Core" />
+    <Link Source="ContosoCentr.MT.BO.NetStandard" Target="Microsoft.AdCenter.Shared.Logging.ClientLibrary" />
+    <Link Source="ContosoCentr.MT.BO.NetStandard" Target="ContosoCentr.MT.EO.NetStandard" />
+    <Link Source="ContosoCentr.MT.BO.NetStandard" Target="ContosoCentr.BillingMT.Base" />
+    <Link Source="ContosoCentr.MT.BO.NetStandard" Target="ContosoCentr.SecurityDataProvider" />
+    <Link Source="ContosoCentr.MT.BO.NetStandard" Target="ContosoCentr.MT.DomainData" />
+    <Link Source="ContosoCentr.MT.Dao" Target="ContosoCentr.MT.DataContract" />
+    <Link Source="ContosoCentr.MT.Dao" Target="ContosoCentr.MT.Base" />
+    <Link Source="ContosoCentr.MT.Dao" Target="ContosoCentr.Common.NetStandard" />
+    <Link Source="ContosoCentr.MT.Dao" Target="ContosoCentr.BillingMT.DAO" />
+    <Link Source="ContosoCentr.MT.Dao" Target="ContosoCentr.Common.Core" />
+    <Link Source="ContosoCentr.MT.Dao" Target="ContosoCentr.Cache.DataContract" />
+    <Link Source="ContosoCentr.MT.Dao" Target="ContosoCentr.SecurityDataContract" />
+    <Link Source="ContosoCentr.MT.Dao" Target="ContosoCentr.MT.DomainData" />
+    <Link Source="ContosoCentr.MT.Dao" Target="ContosoCentr.Shared.InstrumentationLibrary" />
+    <Link Source="ContosoCentr.MT.Dao" Target="Shared.Metadata.PartitionSupport" />
+    <Link Source="ContosoCentr.MT.Dao" Target="ContosoCentr.Cache.InMemoryCache" />
+    <Link Source="ContosoCentr.MT.Dao" Target="ContosoCentr.Common.Client" />
+    <Link Source="ContosoCentr.MT.Dao" Target="ContosoCentr.CacheClient.DataContract" />
+    <Link Source="ContosoCentr.MT.Dao" Target="ContosoCentr.Shared.Import" />
+    <Link Source="ContosoCentr.MT.Dao" Target="ContosoCentr.SecurityDataProvider" />
+    <Link Source="ContosoCentr.MT.Dao" Target="DataDistributorService" />
+    <Link Source="ContosoCentr.MT.Dao" Target="ContosoCentr.Cache" />
+    <Link Source="ContosoCentr.MT.Dao" Target="Microsoft.AdCenter.Shared.Logging.Contract" />
+    <Link Source="ContosoCentr.MT.DataContract" Target="ContosoCentr.Common.Core" />
+    <Link Source="ContosoCentr.MT.DataContract" Target="ContosoCentr.Common.NetStandard" />
+    <Link Source="ContosoCentr.MT.DataContract" Target="ContosoCentr.SecurityDataContract" />
+    <Link Source="ContosoCentr.MT.DataContract.Extensions" Target="ContosoCentr.SecurityDataContract" />
+    <Link Source="ContosoCentr.MT.DataContract.Extensions" Target="DataDistributorService" />
+    <Link Source="ContosoCentr.MT.DataContract.Extensions" Target="ContosoCentr.Common.Core" />
+    <Link Source="ContosoCentr.MT.DomainData" Target="ContosoCentr.MT.Base" />
+    <Link Source="ContosoCentr.MT.DomainData" Target="ContosoCentr.MT.DataContract" />
+    <Link Source="ContosoCentr.MT.DomainData" Target="Shared.Metadata.PartitionSupport" />
+    <Link Source="ContosoCentr.MT.DomainData" Target="ContosoCentr.Common.NetStandard" />
+    <Link Source="ContosoCentr.MT.DomainData" Target="ContosoCentr.Common.Core" />
+    <Link Source="ContosoCentr.MT.EntityDataAccessor" Target="ContosoCentr.Common.Core" />
+    <Link Source="ContosoCentr.MT.EntityDataAccessor" Target="ContosoCentr.MT.DataContract" />
+    <Link Source="ContosoCentr.MT.EntityDataAccessor" Target="ContosoCentr.MT.Dao" />
+    <Link Source="ContosoCentr.MT.EntityDataAccessor" Target="ContosoCentr.CacheClient.DataContract" />
+    <Link Source="ContosoCentr.MT.EntityDataAccessor" Target="ContosoCentr.Common.NetStandard" />
+    <Link Source="ContosoCentr.MT.EntityDataAccessor" Target="ContosoCentr.Cache.DataContract" />
+    <Link Source="ContosoCentr.MT.EntityDataAccessor" Target="ContosoCentr.MT.DomainData" />
+    <Link Source="ContosoCentr.MT.EntityDataAccessor" Target="ContosoCentr.SecurityDataContract" />
+    <Link Source="ContosoCentr.MT.EntityDataAccessor" Target="ContosoCentr.MT.Base" />
+    <Link Source="ContosoCentr.MT.EO" Target="ContosoCentr.Common.NetStandard" />
+    <Link Source="ContosoCentr.MT.EO" Target="ContosoCentr.MT.DataContract" />
+    <Link Source="ContosoCentr.MT.EO" Target="ContosoCentr.MT.Dao" />
+    <Link Source="ContosoCentr.MT.EO" Target="ContosoCentr.CacheClient.DataContract" />
+    <Link Source="ContosoCentr.MT.EO" Target="ContosoCentr.Cache.InMemoryCache" />
+    <Link Source="ContosoCentr.MT.EO" Target="ContosoCentr.BillingMT.Base" />
+    <Link Source="ContosoCentr.MT.EO" Target="ContosoCentr.MT.EntityDataAccessor" />
+    <Link Source="ContosoCentr.MT.EO" Target="ContosoCentr.Common.Core" />
+    <Link Source="ContosoCentr.MT.EO" Target="ContosoCentr.BillingMT.DAO" />
+    <Link Source="ContosoCentr.MT.EO" Target="ContosoCentr.Cache.DataContract" />
+    <Link Source="ContosoCentr.MT.EO" Target="ContosoCentr.SecurityDataContract" />
+    <Link Source="ContosoCentr.MT.EO" Target="Microsoft.Advertiser.CampaignManagement.BusinessRules" />
+    <Link Source="ContosoCentr.MT.EO" Target="ContosoCentr.MT.Mao" />
+    <Link Source="ContosoCentr.MT.EO" Target="ContosoCentr.Shared.InstrumentationLibrary" />
+    <Link Source="ContosoCentr.MT.EO" Target="ContosoCentr.Common.Client" />
+    <Link Source="ContosoCentr.MT.EO" Target="ContosoCentr.MT.EO.NetStandard" />
+    <Link Source="ContosoCentr.MT.EO" Target="Microsoft.Fabrikm.Azure.BlobStorage" />
+    <Link Source="ContosoCentr.MT.EO" Target="Microsoft.AdCenter.Shared.Logging.Contract" />
+    <Link Source="ContosoCentr.MT.EO" Target="ContosoCentr.MT.Base" />
+    <Link Source="ContosoCentr.MT.EO" Target="DataDistributorService" />
+    <Link Source="ContosoCentr.MT.EO" Target="Microsoft.AdCenter.Shared.Logging.ClientLibrary" />
+    <Link Source="ContosoCentr.MT.EO" Target="ContosoCentr.Shared.Import" />
+    <Link Source="ContosoCentr.MT.EO" Target="Shared.Metadata.PartitionSupport" />
+    <Link Source="ContosoCentr.MT.EO" Target="ContosoCentr.MT.DomainData" />
+    <Link Source="ContosoCentr.MT.EO" Target="Microsoft.AdCenter.Shared.JobQueue" />
+    <Link Source="ContosoCentr.MT.EO" Target="Microsoft.Fabrikm.Billing.Daos" />
+    <Link Source="ContosoCentr.MT.EO" Target="Microsoft.Fabrikm.Billing.Daos.Entity" />
+    <Link Source="ContosoCentr.MT.EO" Target="ContosoCentr.SecurityDataProvider" />
+    <Link Source="ContosoCentr.MT.EO" Target="EmailDeliveryService.DataContract" />
+    <Link Source="ContosoCentr.MT.EO" Target="ContosoCentr.Common" />
+    <Link Source="ContosoCentr.MT.EO" Target="Microsoft.Fabrikm.Utils" />
+    <Link Source="ContosoCentr.MT.EO" Target="ContosoCentr.UserSecurityInternalClient" />
+    <Link Source="ContosoCentr.MT.EO" Target="DataDistributorService.Extensions" />
+    <Link Source="ContosoCentr.MT.EO.NetStandard" Target="ContosoCentr.Common.Core" />
+    <Link Source="ContosoCentr.MT.EO.NetStandard" Target="ContosoCentr.MT.Base" />
+    <Link Source="ContosoCentr.MT.EO.NetStandard" Target="ContosoCentr.Common.NetStandard" />
+    <Link Source="ContosoCentr.MT.EO.NetStandard" Target="ContosoCentr.MT.EntityDataAccessor" />
+    <Link Source="ContosoCentr.MT.EO.NetStandard" Target="ContosoCentr.CacheClient.DataContract" />
+    <Link Source="ContosoCentr.MT.EO.NetStandard" Target="ContosoCentr.MT.DataContract" />
+    <Link Source="ContosoCentr.MT.EO.NetStandard" Target="ContosoCentr.Cache.DataContract" />
+    <Link Source="ContosoCentr.MT.EO.NetStandard" Target="Microsoft.AdCenter.Shared.Logging.ClientLibrary" />
+    <Link Source="ContosoCentr.MT.EO.NetStandard" Target="ContosoCentr.SecurityDataProvider" />
+    <Link Source="ContosoCentr.MT.EO.NetStandard" Target="ContosoCentr.MT.Dao" />
+    <Link Source="ContosoCentr.MT.EO.NetStandard" Target="ContosoCentr.SecurityDataContract" />
+    <Link Source="ContosoCentr.MT.EO.NetStandard" Target="ContosoCentr.MT.DomainData" />
+    <Link Source="ContosoCentr.MT.EO.NetStandard" Target="ContosoCentr.Cache.InMemoryCache" />
+    <Link Source="ContosoCentr.MT.Mao" Target="ContosoCentr.MT.DataContract" />
+    <Link Source="ContosoCentr.MT.Mao" Target="ContosoCentr.Common.NetStandard" />
+    <Link Source="ContosoCentr.MT.Mao" Target="ContosoCentr.Common.Client" />
+    <Link Source="ContosoCentr.MT.Mao" Target="ContosoCentr.Common.Core" />
+    <Link Source="ContosoCentr.MT.Mao" Target="ContosoCentr.Shared.InstrumentationLibrary" />
+    <Link Source="ContosoCentr.MT.Mao" Target="ContosoCentr.MT.DomainData" />
+    <Link Source="ContosoCentr.MT.Mao" Target="Shared.Metadata.PartitionSupport" />
+    <Link Source="ContosoCentr.MT.PortabilityExtensions" Target="ContosoCentr.BillingMT.Base" />
+    <Link Source="ContosoCentr.MT.PortabilityExtensions" Target="ContosoCentr.Common.NetStandard" />
+    <Link Source="ContosoCentr.MT.PortabilityExtensions" Target="ContosoCentr.Common.Core" />
+    <Link Source="ContosoCentr.MT.PortabilityExtensions" Target="ContosoCentr.Common.Client" />
+    <Link Source="ContosoCentr.MT.PortabilityExtensions" Target="ContosoCentr.Common" />
+    <Link Source="ContosoCentr.MT.PortabilityExtensions" Target="ContosoCentr.MT.DataContract" />
+    <Link Source="ContosoCentr.MT.PortabilityExtensions" Target="ContosoCentr.Cache.InMemoryCache" />
+    <Link Source="ContosoCentr.MT.PortabilityExtensions" Target="ContosoCentr.Cache" />
+    <Link Source="ContosoCentr.MT.PortabilityExtensions" Target="ContosoCentr.MT.Dao" />
+    <Link Source="ContosoCentr.MT.PortabilityExtensions" Target="ContosoCentr.MT.Base" />
+    <Link Source="ContosoCentr.MT.PortabilityExtensions" Target="ContosoCentr.Cache.DataContract" />
+    <Link Source="ContosoCentr.MT.Service.CoreDependencies" Target="ContosoCentr.Common.NetStandard" />
+    <Link Source="ContosoCentr.MT.Service.CoreDependencies" Target="Microsoft.Fabrikm.Azure.BlobStorage" />
+    <Link Source="ContosoCentr.MT.Service.CoreDependencies" Target="ContosoCentr.Shared.InstrumentationLibrary" />
+    <Link Source="ContosoCentr.MT.Service.CoreDependencies" Target="ContosoCentr.MT.DataContract" />
+    <Link Source="ContosoCentr.MT.Service.CoreDependencies" Target="ContosoCentr.Common.Core" />
+    <Link Source="ContosoCentr.MT.Service.CoreDependencies" Target="ContosoCentr.MT.Base" />
+    <Link Source="ContosoCentr.MT.Service.CoreDependencies" Target="ContosoCentr.SecurityDataContract" />
+    <Link Source="ContosoCentr.MT.Service.CoreDependencies" Target="ContosoCentr.Common.Client" />
+    <Link Source="ContosoCentr.MT.Service.CoreDependencies" Target="Microsoft.AdCenter.Shared.Logging.ClientLibrary" />
+    <Link Source="ContosoCentr.MT.Service.CoreDependencies" Target="Shared.Metadata.PartitionSupport" />
+    <Link Source="ContosoCentr.MT.Service.CoreDependencies" Target="ContosoCentr.Shared.DynamicConfigurationManager.NetStandard" />
+    <Link Source="ContosoCentr.MT.Service.CoreDependencies" Target="Microsoft.AdCenter.Shared.Logging.Contract" />
+    <Link Source="ContosoCentr.MT.Service.CoreDependencies" Target="ContosoCentr.MT.BO.NetStandard" />
+    <Link Source="ContosoCentr.MT.Service.CoreDependencies" Target="ContosoCentr.SecurityDataProvider" />
+    <Link Source="ContosoCentr.MT.Service.CoreDependencies" Target="ContosoCentr.UserSecurityInternalClient" />
+    <Link Source="ContosoCentr.MT.Service.CoreDependencies" Target="ContosoCentr.CacheClient.DataContract" />
+    <Link Source="ContosoCentr.MT.Service.CoreDependencies" Target="ContosoCentr.CacheClient.Implementation" />
+    <Link Source="ContosoCentr.MT.Service.CoreDependencies" Target="ContosoCentr.MT.EO.NetStandard" />
+    <Link Source="ContosoCentr.MT.ServiceImpl" Target="ContosoCentr.Common.NetStandard" />
+    <Link Source="ContosoCentr.MT.ServiceImpl" Target="ContosoCentr.Common" />
+    <Link Source="ContosoCentr.MT.ServiceImpl" Target="ContosoCentr.Cache.InMemoryCache" />
+    <Link Source="ContosoCentr.MT.ServiceImpl" Target="DataDistributorService.Extensions" />
+    <Link Source="ContosoCentr.MT.ServiceImpl" Target="ContosoCentr.MT.DataContract.Extensions" />
+    <Link Source="ContosoCentr.MT.ServiceImpl" Target="ContosoCentr.SecurityDataContract" />
+    <Link Source="ContosoCentr.MT.ServiceImpl" Target="ContosoCentr.Cache.DataContract" />
+    <Link Source="ContosoCentr.MT.ServiceImpl" Target="ContosoCentr.MT.Base" />
+    <Link Source="ContosoCentr.MT.ServiceImpl" Target="ContosoCentr.MT.EO" />
+    <Link Source="ContosoCentr.MT.ServiceImpl" Target="ContosoCentr.UserSecurityInternalClient" />
+    <Link Source="ContosoCentr.MT.ServiceImpl" Target="DataDistributorService" />
+    <Link Source="ContosoCentr.MT.ServiceImpl" Target="ContosoCentr.MT.Base.Extensions" />
+    <Link Source="ContosoCentr.MT.ServiceImpl" Target="ContosoCentr.Shared.InstrumentationLibrary" />
+    <Link Source="ContosoCentr.MT.ServiceImpl" Target="ContosoCentr.Shared.InstrumentationLibrary.Extension" />
+    <Link Source="ContosoCentr.MT.ServiceImpl" Target="ContosoCentr.MT.DataContract" />
+    <Link Source="ContosoCentr.MT.ServiceImpl" Target="ContosoCentr.SecurityDataProvider" />
+    <Link Source="ContosoCentr.MT.ServiceImpl" Target="ContosoCentr.MT.EO.NetStandard" />
+    <Link Source="ContosoCentr.MT.ServiceImpl" Target="ContosoCentr.MT.Mao" />
+    <Link Source="ContosoCentr.MT.ServiceImpl" Target="Shared.Metadata.PartitionSupport" />
+    <Link Source="ContosoCentr.MT.ServiceImpl" Target="ContosoCentr.BillingMT.DAO" />
+    <Link Source="ContosoCentr.MT.ServiceImpl" Target="Microsoft.Fabrikm.Apps.Encryption" />
+    <Link Source="ContosoCentr.MT.ServiceImpl" Target="ContosoCentr.Common.Core" />
+    <Link Source="ContosoCentr.MT.ServiceImpl" Target="ContosoCentr.Shared.DynamicConfigurationManager.NetStandard" />
+    <Link Source="ContosoCentr.MT.ServiceImpl" Target="ContosoCentr.MT.Service.CoreDependencies" />
+    <Link Source="ContosoCentr.MT.ServiceImpl" Target="ContosoCentr.Cache" />
+    <Link Source="ContosoCentr.MT.ServiceImpl" Target="ContosoCentr.MT.STS" />
+    <Link Source="ContosoCentr.MT.ServiceImpl" Target="ContosoCentr.MT.STSCommon" />
+    <Link Source="ContosoCentr.MT.ServiceImpl" Target="ContosoCentr.SecurityService" />
+    <Link Source="ContosoCentr.MT.ServiceImpl" Target="ContosoCentr.MT.DomainData" />
+    <Link Source="ContosoCentr.MT.ServiceImpl" Target="ContosoCentr.MT.Dao" />
+    <Link Source="ContosoCentr.MT.ServiceImpl" Target="ContosoCentr.MT.BO" />
+    <Link Source="ContosoCentr.MT.ServiceImpl" Target="ContosoCentr.MT.BO.NetStandard" />
+    <Link Source="ContosoCentr.MT.ServiceImpl" Target="ContosoCentr.CacheClient.DataContract" />
+    <Link Source="ContosoCentr.MT.ServiceImpl" Target="Microsoft.AdCenter.Shared.Logging.Contract" />
+    <Link Source="ContosoCentr.MT.ServiceImpl" Target="ContosoCentr.MT.EntityDataAccessor" />
+    <Link Source="ContosoCentr.MT.STS" Target="ContosoCentr.MT.STSCommon" />
+    <Link Source="ContosoCentr.MT.STS" Target="ContosoCentr.Shared.InstrumentationLibrary" />
+    <Link Source="ContosoCentr.MT.STS" Target="ContosoCentr.Shared.InstrumentationLibrary.Extension" />
+    <Link Source="ContosoCentr.MT.STS" Target="ContosoCentr.Common.NetStandard" />
+    <Link Source="ContosoCentr.MT.STS" Target="ContosoCentr.SecurityDataProvider" />
+    <Link Source="ContosoCentr.MT.STS" Target="ContosoCentr.Cache.DataContract" />
+    <Link Source="ContosoCentr.MT.STS" Target="ContosoCentr.SecurityDataContract" />
+    <Link Source="ContosoCentr.MT.STS" Target="ContosoCentr.MT.DataContract" />
+    <Link Source="ContosoCentr.MT.STS" Target="ContosoCentr.Common" />
+    <Link Source="ContosoCentr.MT.STS" Target="ContosoCentr.Common.Core" />
+    <Link Source="ContosoCentr.MT.STS" Target="ContosoCentr.MT.EO" />
+    <Link Source="ContosoCentr.MT.STS" Target="Microsoft.AdCenter.Shared.Logging.ClientLibrary" />
+    <Link Source="ContosoCentr.SecurityDataContract" Target="ContosoCentr.Common.Core" />
+    <Link Source="ContosoCentr.SecurityDataProvider" Target="ContosoCentr.SecurityDataContract" />
+    <Link Source="ContosoCentr.SecurityDataProvider" Target="ContosoCentr.Common.Core" />
+    <Link Source="ContosoCentr.SecurityDataProvider" Target="ContosoCentr.Cache.DataContract" />
+    <Link Source="ContosoCentr.SecurityDataProvider" Target="ContosoCentr.CacheClient.DataContract" />
+    <Link Source="ContosoCentr.SecurityDataProvider" Target="ContosoCentr.Cache.InMemoryCache" />
+    <Link Source="ContosoCentr.SecurityDataProvider" Target="ContosoCentr.Common.NetStandard" />
+    <Link Source="ContosoCentr.SecurityDataProvider" Target="ContosoCentr.MT.DataContract" />
+    <Link Source="ContosoCentr.SecurityDataProvider" Target="ContosoCentr.MT.Base" />
+    <Link Source="ContosoCentr.SecurityDataProvider" Target="ContosoCentr.CacheClient.Implementation" />
+    <Link Source="ContosoCentr.SecurityDataProvider" Target="ContosoCentr.MT.DomainData" />
+    <Link Source="ContosoCentr.SecurityService" Target="ContosoCentr.CacheClient.DataContract" />
+    <Link Source="ContosoCentr.SecurityService" Target="ContosoCentr.SecurityDataContract" />
+    <Link Source="ContosoCentr.SecurityService" Target="ContosoCentr.Common.NetStandard" />
+    <Link Source="ContosoCentr.SecurityService" Target="ContosoCentr.Cache.InMemoryCache" />
+    <Link Source="ContosoCentr.SecurityService" Target="ContosoCentr.Cache.DataContract" />
+    <Link Source="ContosoCentr.SecurityService" Target="ContosoCentr.Common.Core" />
+    <Link Source="ContosoCentr.SecurityService" Target="ContosoCentr.SecurityDataProvider" />
+    <Link Source="ContosoCentr.SecurityService" Target="ContosoCentr.MT.STSCommon" />
+    <Link Source="ContosoCentr.SecurityService" Target="ContosoCentr.MT.Base.Extensions" />
+    <Link Source="ContosoCentr.SecurityService" Target="ContosoCentr.Shared.InstrumentationLibrary" />
+    <Link Source="ContosoCentr.SecurityService" Target="ContosoCentr.MT.Base" />
+    <Link Source="ContosoCentr.SecurityService" Target="ContosoCentr.Shared.InstrumentationLibrary.Extension" />
+    <Link Source="ContosoCentr.SecurityService" Target="ContosoCentr.Common" />
+    <Link Source="ContosoCentr.SecurityService" Target="ContosoCentr.MT.DataContract" />
+    <Link Source="ContosoCentr.SecurityService" Target="Microsoft.AdCenter.Shared.Logging.ClientLibrary" />
+    <Link Source="ContosoCentr.SecurityService" Target="DataDistributorService" />
+    <Link Source="ContosoCentr.SecurityService" Target="ContosoCentr.MT.Dao" />
+    <Link Source="ContosoCentr.Shared.DynamicConfigurationManager" Target="ContosoCentr.Common.Core" />
+    <Link Source="ContosoCentr.Shared.DynamicConfigurationManager.NetStandard" Target="ContosoCentr.Common.Core" />
+    <Link Source="ContosoCentr.Shared.Import" Target="Shared.Metadata.PartitionSupport" />
+    <Link Source="ContosoCentr.Shared.Import" Target="Microsoft.AdCenter.Shared.Logging.Contract" />
+    <Link Source="ContosoCentr.Shared.Import" Target="ContosoCentr.Common.NetStandard" />
+    <Link Source="ContosoCentr.Shared.InstrumentationLibrary" Target="Microsoft.AdCenter.Shared.Logging.ClientLibrary" />
+    <Link Source="ContosoCentr.Shared.InstrumentationLibrary.Extension" Target="ContosoCentr.Shared.InstrumentationLibrary" />
+    <Link Source="ContosoCentr.Shared.InstrumentationLibrary.Extension" Target="Microsoft.AdCenter.Shared.Logging.ClientLibrary" />
+    <Link Source="ContosoCentr.UserSecurityInternalClient" Target="ContosoCentr.WCFServiceHelper" />
+    <Link Source="ContosoCentr.UserSecurityInternalClient" Target="ContosoCentr.SecurityDataContract" />
+    <Link Source="ContosoCentr.UserSecurityInternalClient" Target="ContosoCentr.SecurityDataProvider" />
+    <Link Source="ContosoCentr.UserSecurityInternalClient" Target="ContosoCentr.Common.Core" />
+    <Link Source="ContosoCentr.UserSecurityInternalClient" Target="ContosoCentr.Common.NetStandard" />
+    <Link Source="ContosoCentr.UserSecurityInternalClient" Target="ContosoCentr.Cache.DataContract" />
+    <Link Source="DataDistributorService" Target="ContosoCentr.Common.Core" />
+    <Link Source="DataDistributorService" Target="ContosoCentr.Common.NetStandard" />
+    <Link Source="DataDistributorService.Extensions" Target="DataDistributorService" />
+    <Link Source="DataDistributorService.Extensions" Target="ContosoCentr.Common.NetStandard" />
+    <Link Source="DataDistributorService.Extensions" Target="ContosoCentr.Common.Core" />
+    <Link Source="EmailDeliveryService.DataContract" Target="ContosoCentr.Common.Core" />
+    <Link Source="MetadataServiceClient" Target="Microsoft.Fabrikm.Apps.Encryption" />
+    <Link Source="MetadataServiceClient" Target="Microsoft.AdCenter.Shared.Logging.Contract" />
+    <Link Source="MetadataServiceClient" Target="Microsoft.Fabrikm.Utils" />
+    <Link Source="MetadataServiceClient" Target="AsyncUtils" />
+    <Link Source="MetadataServiceClient" Target="WcfClientHelper" />
+    <Link Source="Microsoft.AdCenter.Common.MetricClient" Target="Microsoft.AdCenter.Shared.Logging.Contract" />
+    <Link Source="Microsoft.AdCenter.Common.MetricClient" Target="AsyncUtils" />
+    <Link Source="Microsoft.AdCenter.Common.MetricClient" Target="Microsoft.AdCenter.Shared.Logging.Facade" />
+    <Link Source="Microsoft.AdCenter.Common.MetricClient" Target="Microsoft.Fabrikm.Utils" />
+    <Link Source="Microsoft.AdCenter.Shared.JobQueue" Target="ContosoCentr.Common.NetStandard" />
+    <Link Source="Microsoft.AdCenter.Shared.Logging.Facade" Target="Microsoft.AdCenter.Shared.Logging.ClientLibrary" />
+    <Link Source="Microsoft.AdCenter.Shared.Logging.Facade" Target="Microsoft.AdCenter.Shared.Logging.Contract" />
+    <Link Source="Microsoft.AdCenter.Shared.Logging.Facade" Target="Microsoft.AdCenter.Shared.Logging.KustoLogSink" />
+    <Link Source="Microsoft.AdCenter.Shared.Logging.KustoLogSink" Target="Microsoft.AdCenter.Shared.Logging.ClientLibrary" />
+    <Link Source="Microsoft.AdCenter.Shared.Logging.KustoLogSink" Target="Microsoft.Fabrikm.Utils" />
+    <Link Source="Microsoft.AspNetCore.Authentication.Core" Target="Microsoft.AspNetCore.Authentication.Abstractions" />
+    <Link Source="Microsoft.AspNetCore.Connections.Abstractions" Target="Microsoft.AspNetCore.Http.Features" />
+    <Link Source="Microsoft.AspNetCore.Diagnostics" Target="Microsoft.AspNetCore.Diagnostics.Abstractions" />
+    <Link Source="Microsoft.AspNetCore.Diagnostics" Target="Microsoft.AspNetCore.Http.Features" />
+    <Link Source="Microsoft.AspNetCore.Diagnostics" Target="Microsoft.AspNetCore.WebUtilities" />
+    <Link Source="Microsoft.AspNetCore.Diagnostics" Target="Microsoft.AspNetCore.Http.Extensions" />
+    <Link Source="Microsoft.AspNetCore" Target="Microsoft.AspNetCore.Routing" />
+    <Link Source="Microsoft.AspNetCore" Target="Microsoft.AspNetCore.HostFiltering" />
+    <Link Source="Microsoft.AspNetCore" Target="Microsoft.AspNetCore.Server.IISIntegration" />
+    <Link Source="Microsoft.AspNetCore.HostFiltering" Target="Microsoft.AspNetCore.Http.Features" />
+    <Link Source="Microsoft.AspNetCore.Http" Target="Microsoft.AspNetCore.Http.Features" />
+    <Link Source="Microsoft.AspNetCore.Http" Target="Microsoft.AspNetCore.WebUtilities" />
+    <Link Source="Microsoft.AspNetCore.Http" Target="Microsoft.Net.Http.Headers" />
+    <Link Source="Microsoft.AspNetCore.Http.Extensions" Target="Microsoft.AspNetCore.Http.Features" />
+    <Link Source="Microsoft.AspNetCore.Http.Extensions" Target="Microsoft.Net.Http.Headers" />
+    <Link Source="Microsoft.AspNetCore.HttpOverrides" Target="Microsoft.AspNetCore.Http.Features" />
+    <Link Source="Microsoft.AspNetCore.Routing.Abstractions" Target="Microsoft.AspNetCore.Http.Features" />
+    <Link Source="Microsoft.AspNetCore.Routing" Target="Microsoft.AspNetCore.Routing.Abstractions" />
+    <Link Source="Microsoft.AspNetCore.Routing" Target="Microsoft.AspNetCore.Http.Features" />
+    <Link Source="Microsoft.AspNetCore.Server.IISIntegration" Target="Microsoft.AspNetCore.Http.Features" />
+    <Link Source="Microsoft.AspNetCore.Server.IISIntegration" Target="Microsoft.AspNetCore.HttpOverrides" />
+    <Link Source="Microsoft.AspNetCore.Server.IISIntegration" Target="Microsoft.AspNetCore.Authentication.Abstractions" />
+    <Link Source="Microsoft.AspNetCore.Server.IISIntegration" Target="Microsoft.Net.Http.Headers" />
+    <Link Source="Microsoft.AspNetCore.Server.IISIntegration" Target="Microsoft.AspNetCore.Authentication.Core" />
+    <Link Source="Microsoft.AspNetCore.WebSockets" Target="Microsoft.AspNetCore.Http.Features" />
+    <Link Source="Microsoft.AspNetCore.WebUtilities" Target="Microsoft.Net.Http.Headers" />
+    <Link Source="Microsoft.Fabrikm.Apps.Encryption" Target="AsyncUtils" />
+    <Link Source="Microsoft.Fabrikm.Azure.BlobStorage" Target="Microsoft.AdCenter.Shared.Logging.Contract" />
+    <Link Source="Microsoft.Fabrikm.Billing.Daos" Target="Microsoft.Fabrikm.Billing.Daos.Entity" />
+    <Link Source="Microsoft.Fabrikm.Billing.Daos" Target="ContosoCentr.MT.DataContract" />
+    <Link Source="Microsoft.Fabrikm.Utils" Target="Microsoft.AdCenter.Shared.Logging.Contract" />
+    <Link Source="Shared.Metadata.PartitionSupport" Target="Microsoft.Fabrikm.Apps.Encryption" />
+    <Link Source="Shared.Metadata.PartitionSupport" Target="Microsoft.AdCenter.Shared.Logging.Contract" />
+    <Link Source="Shared.Metadata.PartitionSupport" Target="Microsoft.AdCenter.Shared.Logging.ClientLibrary" />
+    <Link Source="Shared.Metadata.PartitionSupport" Target="MetadataServiceClient" />
+    <Link Source="Shared.Metadata.PartitionSupport" Target="Microsoft.Fabrikm.Utils" />
+    <Link Source="Shared.Metadata.PartitionSupport" Target="Microsoft.AdCenter.Shared.Logging.Facade" />
+    <Link Source="Shared.Metadata.PartitionSupport" Target="Microsoft.AdCenter.Common.MetricClient" />
+    <Link Source="Shared.Metadata.PartitionSupport" Target="AsyncUtils" />
+    <Link Source="WcfClientHelper" Target="Microsoft.AdCenter.Shared.Logging.Contract" />
+    <Link Source="ContosoCentr.MT.Service" Target="ContosoCentr.Common.NetStandard" />
+    <Link Source="ContosoCentr.MT.Service" Target="Microsoft.AdCenter.Shared.Logging.ClientLibrary" />
+    <Link Source="ContosoCentr.MT.Service" Target="ContosoCentr.MT.Base" />
+    <Link Source="ContosoCentr.MT.Service" Target="ContosoCentr.MT.Proxy" />
+    <Link Source="ContosoCentr.MT.Service" Target="ContosoCentr.Shared.DynamicConfigurationManager.NetStandard" />
+    <Link Source="ContosoCentr.MT.Service" Target="Microsoft.Fabrikm.Utils" />
+    <Link Source="ContosoCentr.MT.Service" Target="ContosoCentr.Shared.InstrumentationLibrary" />
+    <Link Source="ContosoCentr.MT.Service" Target="ContosoCentr.MT.PortabilityExtensions" />
+    <Link Source="ContosoCentr.MT.Service" Target="ContosoCentr.Shared.DynamicConfigurationManager" />
+    <Link Source="ContosoCentr.MT.Service" Target="ContosoCentr.Shared.InstrumentationLibrary.Extension" />
+    <Link Source="ContosoCentr.MT.Service" Target="ContosoCentr.MT.DataContract" />
+    <Link Source="ContosoCentr.MT.Service" Target="ContosoCentr.SecurityDataContract" />
+    <Link Source="ContosoCentr.MT.Service" Target="ContosoCentr.Common.Client" />
+    <Link Source="ContosoCentr.MT.Service" Target="ContosoCentr.BillingMT.Base" />
+    <Link Source="ContosoCentr.MT.Service" Target="ContosoCentr.MT.ServiceImpl" />
+    <Link Source="ContosoCentr.MT.Service" Target="ContosoCentr.Common" />
+    <Link Source="ContosoCentr.MT.Service" Target="ContosoCentr.SecurityService" />
+    <Link Source="ContosoCentr.MT.Service" Target="ContosoCentr.MT.STS" />
+    <Link Source="ContosoCentr.MT.Service" Target="ContosoCentr.BillingMT.ServiceImpl" />
+    <Link Source="ContosoCentr.MT.Service" Target="ContosoCentr.Cache.CacheService" />
+    <Link Source="ContosoCentr.MT.Service" Target="ContosoCentr.MT.Service.CoreDependencies" />
+    <Link Source="ContosoCentr.MT.Service" Target="ContosoCentr.MT.EO" />
+    <Link Source="ContosoCentr.MT.Service" Target="Shared.Metadata.PartitionSupport" />
+    <Link Source="ContosoCentr.MT.Service" Target="ContosoCentr.Cache.CacheServiceDependency" />
+    <Link Source="ContosoCentr.MT.Service" Target="ContosoCentr.Common.Core" />
+    <Link Source="ContosoCentr.MT.Service" Target="ContosoCentr.Cache.InMemoryCache" />
+  </Links>
+  <Categories>
+    <Category Id=".NETStandard,Version=v2.0" Label=".NETStandard,Version=v2.0" />
+    <Category Id=".NETFramework,Version=v4.7.2" Label=".NETFramework,Version=v4.7.2" />
+    <Category Id=".NETFramework,Version=v4.5.2" Label=".NETFramework,Version=v4.5.2" />
+    <Category Id="UnknownFramework" Label="UnknownFramework" />
+  </Categories>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="Count" ValueLabel="Function">
+      <Setter Property="FontSize" Expression="14+(Count*2)" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Unreferenced" ValueLabel="True">
+      <Condition Expression="IsReferenced='false'" />
+      <Setter Property="Icon" Value="pack://application:,,,/Microsoft.VisualStudio.Progression.GraphControl;component/Icons/kpi_red_sym2_large.png" />
+    </Style>
+    <Style TargetType="Node" GroupLabel=".NETStandard,Version=v2.0" ValueLabel="True">
+      <Condition Expression="HasCategory('.NETStandard,Version=v2.0')" />
+      <Setter Property="Background" Value="Green" />
+    </Style>
+    <Style TargetType="Node" GroupLabel=".NETFramework,Version=v4.7.2" ValueLabel="True">
+      <Condition Expression="HasCategory('.NETFramework,Version=v4.7.2')" />
+      <Setter Property="Background" Value="White" />
+    </Style>
+    <Style TargetType="Node" GroupLabel=".NETFramework,Version=v4.5.2" ValueLabel="True">
+      <Condition Expression="HasCategory('.NETFramework,Version=v4.5.2')" />
+      <Setter Property="Background" Value="White" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="UnknownFramework" ValueLabel="True">
+      <Condition Expression="HasCategory('UnknownFramework')" />
+      <Setter Property="Background" Value="White" />
+    </Style>
+  </Styles>
+  <Properties>
+    <Property Id="Count" DataType="System.Int32" Label="Count" Description="Count" />
+    <Property Id="IsReferenced" DataType="System.Boolean" Label="IsReferenced" Description="IsReferenced" />
+  </Properties>
+</DirectedGraph>
