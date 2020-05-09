@@ -12,12 +12,13 @@ List of commands:
 graph
 ====
 ```
-graph       {sourceAssembliesFolder} [{ignoreList}] [{outputFile}:output.dgml]
+graph       {sourceAssembliesFolder} [{ignoreList}] [{outputFile}:output.dgml] [{rootAssembliesCsv}]
             about: creates a dependency graph which highlights .net standard compatible binaries shown with weighted dependencies. 
             param: sourceAssembliesFolder: used to extract assembly information. 
             param: ignoreList: items to ignore in rendering. Can be filepath that contains newline-separated assemblies, 
                    or comma-separated assemblies.
             param: outputFile: output filepath of dgml file.
+            param: rootAssembliesCsv: specify root assemblies while creating graph. This is optional.
 ```
 Example:
 ```
@@ -32,7 +33,7 @@ Refer ignoreExternalAssembliesFile.txt file [here](wiki/demo/ignoreExternalAssem
 stats
 ====
 ```
-stats       {sourceAssembliesFolder} [{ignoreList}] [{outputFile}:output.stats.txt]
+stats       {sourceAssembliesFolder} [{ignoreList}] [{outputFile}:output.stats.txt] [{rootAssembliesCsv}]
             about: analyzes complexity of .net standard migration effort. 
                    - cluster assemblies based on framework 
                    - exclusive reference complexity (provides estimate of immediate migration effort)
@@ -42,6 +43,7 @@ stats       {sourceAssembliesFolder} [{ignoreList}] [{outputFile}:output.stats.t
             param: ignoreList: items to ignore in rendering. Can be filepath that contains newline-separated assemblies, 
                    or comma-separated assemblies.
             param: outputFile: output filepath of analysis stats file.
+            param: rootAssembliesCsv: specify root assemblies while creating graph. This is optional.
 ```
 Example:
 ```
