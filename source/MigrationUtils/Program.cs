@@ -111,7 +111,7 @@ graph       {sourceAssembliesFolder} [{ignoreList}] [{outputFile}:output.dgml] [
             param: outputFile: output filepath of dgml file.
             param: rootAssembliesCsv: specify root assemblies while creating graph. This is optional.
 
-stats       {sourceAssembliesFolder} [{ignoreList}] [{outputFile}:output.stats.txt]
+stats       {sourceAssembliesFolder} [{ignoreList}] [{outputFile}:output.stats.txt] [{rootAssembliesCsv}]
             about: analyzes complexity of .net standard migration effort. 
                    - cluster assemblies based on framework 
                    - exclusive reference complexity (provides estimate of immediate migration effort)
