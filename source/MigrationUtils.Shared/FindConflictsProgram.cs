@@ -15,7 +15,7 @@ namespace MigrationUtils
             int depth = 0,
             HashSet<string> duplicateCheckMap = null)
         {
-            var assemblies = GetAllAssemblies(folder);
+            var assemblies = GetAllAssemblies(folder, rootFilter: null);
 
             if (duplicateCheckMap == null)
             {
@@ -50,7 +50,7 @@ namespace MigrationUtils
             }
         }
 
-        public IEnumerable<string> FindReferencingAssemblies(string folder, string referencedAssemblyName, bool partialCompare = true)
+        public IEnumerable<string> FindReferencingAssemblies(string folder, string referencedAssemblyName, bool partialCompare = true, string[] rootFilter = null)
         {
             referencedAssemblyName = referencedAssemblyName.Replace(".dll", "");
 
@@ -58,7 +58,7 @@ namespace MigrationUtils
                 ? new Func<string, string, bool>((str, subStr) => str.IndexOf(subStr, StringComparison.OrdinalIgnoreCase) != -1)
                 : new Func<string, string, bool>((str, subStr) => string.Equals(str, subStr, StringComparison.OrdinalIgnoreCase));
 
-            var assemblies = GetAllAssemblies(folder);
+            var assemblies = GetAllAssemblies(folder, rootFilter);
 
             var references = GetReferencesFromAllAssemblies(assemblies);
 
@@ -80,9 +80,9 @@ namespace MigrationUtils
             }
         }
 
-        public void FindConflictingReferences(string folder, bool ignoreSystemLibs)
+        public void FindConflictingReferences(string folder, bool ignoreSystemLibs, string[] rootFilter)
         {
-            var assemblies = GetAllAssemblies(folder);
+            var assemblies = GetAllAssemblies(folder, rootFilter);
 
             var references = GetReferencesFromAllAssemblies(assemblies);
 
@@ -133,13 +133,18 @@ namespace MigrationUtils
             return references;
         }
 
-        private static Dictionary<string, List<Assembly>> FolderToAssembliesMap = new Dictionary<string, List<Assembly>>(StringComparer.OrdinalIgnoreCase);
+        private static Dictionary<string, Dictionary<string, Assembly>> FolderToAssembliesMap
+            = new Dictionary<string, Dictionary<string, Assembly>>(StringComparer.OrdinalIgnoreCase);
 
-        internal static List<Assembly> GetAllAssemblies(string path)
+        internal static List<Assembly> GetAllAssemblies(string path, string[] rootFilter)
+            => GetAllAssembliesV2(path, rootFilter).Select(x => x.Value).ToList();
+
+        internal static Dictionary<string, Assembly> GetAllAssembliesV2(string path, string[] rootFilter)
         {
             if (FolderToAssembliesMap.ContainsKey(path))
             {
-                return FolderToAssembliesMap[path];
+                // TODO: cache by filter
+                return FilterByRoot(FolderToAssembliesMap[path], rootFilter);
             }
 
             var files = new List<FileInfo>();
@@ -162,10 +167,74 @@ namespace MigrationUtils
                 .Where(dll => dll != null)
                 .GroupBy(x => x.GetName().Name, StringComparer.OrdinalIgnoreCase)
                 .Select(x => x.First())
-                .ToList();
+                .OrderBy(x => x.GetName().Name)
+                .ToDictionary(x => x.GetName().Name, StringComparer.OrdinalIgnoreCase);
+
+            var metaPath = Path.GetFullPath("meta.log");
+            Log.Info($"listing read assemblies at: \"{metaPath}\"");
+            File.WriteAllLines(metaPath, result.Keys.OrderBy(x => x).ToArray());
 
             FolderToAssembliesMap.Add(path, result);
-            return result;
+            return FilterByRoot(result, rootFilter);
+        }
+
+        private static Dictionary<string, Assembly> FilterByRoot(Dictionary<string, Assembly> assemblies, string[] rootFilter)
+        {
+            if (rootFilter == null || rootFilter.Length == 0)
+                return assemblies;
+
+            var rootAssemblies = rootFilter.Where(r => assemblies.ContainsKey(r)).ToArray();
+            if (rootAssemblies.Length != rootAssemblies.Length)
+                throw new InvalidOperationException("invalid root filters specified");
+
+            var filteredAssemblies = rootFilter.Select(a => assemblies[a])
+                .ToDictionary(x => x.GetName().Name, StringComparer.OrdinalIgnoreCase);
+
+            var queue = new Queue<string>(rootFilter);
+            while (queue.Count != 0)
+            {
+                var assemblyName = queue.Dequeue();
+                if (assemblies.ContainsKey(assemblyName))
+                {
+                    var assembly = assemblies[assemblyName];
+                    if (!filteredAssemblies.ContainsKey(assemblyName))
+                        filteredAssemblies.Add(assemblyName, assembly);
+
+                    foreach (var refAssembly in assembly.GetReferencedAssemblies())
+                    {
+                        queue.Enqueue(refAssembly.Name);
+                    }
+                }
+            }
+
+            return filteredAssemblies;
+        }
+
+        internal static Dictionary<string, Assembly[]> GetAssembliesRefByMap(string sourceAssembliesFolder, string[] rootFilter)
+        {
+            var assemblies = GetAllAssemblies(sourceAssembliesFolder, rootFilter);
+            var assembliesMap = GetAllAssembliesV2(sourceAssembliesFolder, rootFilter);
+
+            var allAssemblies = assemblies
+                .SelectMany(a => a.GetReferencedAssemblies().Select(r => Tuple.Create(a.GetName(), r)));
+
+            var assemblyLookup = assemblies.ToDictionary(x => x.GetName().Name, x => x.GetName(), StringComparer.OrdinalIgnoreCase);
+            foreach (var refAssembly in allAssemblies.Select(x => x.Item2))
+            {
+                if (!assemblyLookup.ContainsKey(refAssembly.Name))
+                {
+                    assemblyLookup.Add(refAssembly.Name, refAssembly);
+                }
+            }
+
+            var assemblyRefMap = allAssemblies
+                .GroupBy(refInfo => refInfo.Item2.Name)
+                .OrderBy(g => g.Key)
+                .ToDictionary(
+                    g => g.Key,
+                    g => g.Select(gi => assembliesMap[gi.Item1.Name]).OrderBy(gi => gi.GetName().Name).ToArray());
+
+            return assemblyRefMap;
         }
 
         private class Reference

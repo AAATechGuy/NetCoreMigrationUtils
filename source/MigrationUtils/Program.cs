@@ -39,7 +39,8 @@ namespace MigrationUtils
                     case "conflicts":
                         new FindConflictsProgram().FindConflictingReferences(
                             folder: args.GetInput<string>(0),
-                            ignoreSystemLibs: args.GetInput<bool>(1, mandatory: false, defaultValue: true));
+                            ignoreSystemLibs: args.GetInput<bool>(1, mandatory: false, defaultValue: true),
+                            rootFilter: null);
                         break;
                     case "refs":
                         new FindConflictsProgram().FindReferencingAssemblies(
@@ -57,13 +58,15 @@ namespace MigrationUtils
                         ComplexityAnalyzer.CreateGraph(
                             sourceAssembliesFolder: args.GetInput<string>(0),
                             skipAssemblyFile: args.GetInput<string>(1, mandatory: false, defaultValue: ""),
-                            targetFilepath: args.GetInput<string>(2, mandatory: false, defaultValue: "output.dgml"));
+                            targetFilepath: args.GetInput<string>(2, mandatory: false, defaultValue: "output.dgml"),
+                            rootCsv: args.GetInput<string>(3, mandatory: false, defaultValue: ""));
                         break;
                     case "stats":
                         ComplexityAnalyzer.AnalyzeComplexity(
                             sourceAssembliesFolder: args.GetInput<string>(0),
                             skipAssemblyFile: args.GetInput<string>(1, mandatory: false, defaultValue: ""),
-                            targetFilepath: args.GetInput<string>(2, mandatory: false, defaultValue: "output.stats.txt"));
+                            targetFilepath: args.GetInput<string>(2, mandatory: false, defaultValue: "output.stats.txt"),
+                            rootCsv: args.GetInput<string>(3, mandatory: false, defaultValue: ""));
                         break;
                     default:
                         throw new Exception("invalid action specified");
@@ -100,12 +103,13 @@ listdep     {sourceAssembliesFolder} {assemblyName} [{ignoreSystemLibraries}:tru
             param: assemblyName: assembly whose dependencies need to be listed.
             param: ignoreSystemLibraries: ignores conflicts for system assemblies. default is true. 
 
-graph       {sourceAssembliesFolder} [{ignoreList}] [{outputFile}:output.dgml]
+graph       {sourceAssembliesFolder} [{ignoreList}] [{outputFile}:output.dgml] [{rootAssembliesCsv}]
             about: creates a dependency graph which highlights .net standard compatible binaries shown with weighted dependencies. 
             param: sourceAssembliesFolder: used to extract assembly information. 
             param: ignoreList: items to ignore in rendering. Can be filepath that contains newline-separated assemblies, 
                    or comma-separated assemblies.
             param: outputFile: output filepath of dgml file.
+            param: rootAssembliesCsv: specify root assemblies while creating graph. This is optional.
 
 stats       {sourceAssembliesFolder} [{ignoreList}] [{outputFile}:output.stats.txt]
             about: analyzes complexity of .net standard migration effort. 
@@ -117,6 +121,7 @@ stats       {sourceAssembliesFolder} [{ignoreList}] [{outputFile}:output.stats.t
             param: ignoreList: items to ignore in rendering. Can be filepath that contains newline-separated assemblies, 
                    or comma-separated assemblies.
             param: outputFile: output filepath of analysis stats file.
+            param: rootAssembliesCsv: specify root assemblies while creating graph. This is optional.
 ");
         }
     }

@@ -15,13 +15,17 @@ namespace MigrationUtils
 {
     public static class ComplexityAnalyzer
     {
-        public static void CreateGraph(string sourceAssembliesFolder, string skipAssemblyFile, string targetFilepath)
+        public static void CreateGraph(string sourceAssembliesFolder, string skipAssemblyFile, string targetFilepath, string rootCsv = null)
         {
-            var skipAssemblies = GetSkipAssemblies(skipAssemblyFile);
+            var rootFilter = rootCsv?.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
+            var skipAssemblies = GetSkipAssemblies(skipAssemblyFile, sourceAssembliesFolder, rootFilter);
 
-            var allAssemblies = FindConflictsProgram.GetAllAssemblies(sourceAssembliesFolder);
+            var allAssemblies = FindConflictsProgram.GetAllAssemblies(sourceAssembliesFolder, rootFilter)
+                .Where(x => !skipAssemblies.Contains(x.GetName().Name));
             var assemblies = allAssemblies
-                .Where(x => !ShouldSkip(x.GetName().Name, skipAssemblies));
+                .Where(x => !ShouldSkip(x.GetName().Name, skipAssemblies))
+                .ToArray();
+
             var allAssemblyLinks = allAssemblies.SelectMany(a => a.GetReferencedAssemblies().Select(a2 => Tuple.Create(a, a2)));
             var assemblyLinks = allAssemblyLinks
                 .Where(x => !ShouldSkip(x.Item1.GetName().Name, skipAssemblies) && !ShouldSkip(x.Item2.Name, skipAssemblies));
@@ -34,19 +38,20 @@ namespace MigrationUtils
             Log.Info($"output written to '{targetFilepath}'");
         }
 
-        public static void AnalyzeComplexity(string sourceAssembliesFolder, string skipAssemblyFile, string targetFilepath)
+        public static void AnalyzeComplexity(string sourceAssembliesFolder, string skipAssemblyFile, string targetFilepath, string rootCsv)
         {
-            var skipAssemblies = GetSkipAssemblies(skipAssemblyFile);
-            var stats = GetComplexityStats(sourceAssembliesFolder, skipAssemblies);
+            var rootFilter = rootCsv?.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
+            var skipAssemblies = GetSkipAssemblies(skipAssemblyFile, sourceAssembliesFolder, rootFilter);
+            var stats = GetComplexityStats(sourceAssembliesFolder, skipAssemblies, rootFilter);
 
             // print, write to file
             File.WriteAllText(targetFilepath, stats);
             Log.Info($"output written to '{targetFilepath}'");
         }
 
-        private static string GetComplexityStats(string folder, string[] skipAssemblies)
+        private static string GetComplexityStats(string folder, HashSet<string> skipAssemblies, string[] rootFilter)
         {
-            var allAssemblies = FindConflictsProgram.GetAllAssemblies(folder);
+            var allAssemblies = FindConflictsProgram.GetAllAssemblies(folder, rootFilter);
             var allAssemblyLinks = allAssemblies.SelectMany(a => a.GetReferencedAssemblies().Select(a2 => Tuple.Create(a, a2)));
 
             var builder = CreateBuilder();
@@ -99,7 +104,7 @@ namespace MigrationUtils
             return output.ToString();
         }
 
-        private static string[] GetSkipAssemblies(string skipAssemblyFile)
+        private static HashSet<string> GetSkipAssemblies(string skipAssemblyFile, string sourceAssembliesFolder, string[] rootFilter)
         {
             skipAssemblyFile ??= string.Empty;
             var skipAssemblies = new string[] { };
@@ -114,7 +119,62 @@ namespace MigrationUtils
                 skipAssemblies = skipAssemblyFile.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
             }
 
-            return skipAssemblies;
+            var assemblyMap = FindConflictsProgram.GetAllAssembliesV2(sourceAssembliesFolder, rootFilter);
+
+            // TODO: enhance search
+            var allAssemblies = assemblyMap.SelectMany(a => a.Value.GetReferencedAssemblies().Select(x => x.Name)).ToList();
+            allAssemblies.AddRange(assemblyMap.Keys);
+            var skipAssemblyMap = skipAssemblies
+                .SelectMany(skipAssemblyName => allAssemblies.Where(a => a.StartsWith(skipAssemblyName, StringComparison.OrdinalIgnoreCase)))
+                .OrderBy(x => x)
+                .ToHashSet(StringComparer.OrdinalIgnoreCase);
+
+            var dependenciesOfSkipAssemblies = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+            var processQueue = new Queue<string>(skipAssemblyMap);
+
+            while (processQueue.Count != 0)
+            {
+                var assemblyName = processQueue.Dequeue();
+                if (!dependenciesOfSkipAssemblies.Contains(assemblyName)
+                    && assemblyMap.ContainsKey(assemblyName))
+                {
+                    dependenciesOfSkipAssemblies.Add(assemblyName);
+                    var refs = assemblyMap[assemblyName].GetReferencedAssemblies();
+                    foreach (var refAssembly in refs)
+                    {
+                        processQueue.Enqueue(refAssembly.Name);
+                    }
+                }
+            }
+
+            var assembliesRefByMap = FindConflictsProgram.GetAssembliesRefByMap(sourceAssembliesFolder, rootFilter);
+
+            bool changedOnce;
+            do
+            {
+                changedOnce = false;
+                foreach (var assemblyName in dependenciesOfSkipAssemblies.ToList())
+                {
+                    if (assembliesRefByMap.ContainsKey(assemblyName))
+                    {
+                        var assemblyInfo = assembliesRefByMap[assemblyName];
+                        var validRefs = assemblyInfo
+                            .Select(x => x.GetName().Name)
+                            .Where(x => !skipAssemblyMap.Contains(x))
+                            .ToList();
+
+                        if (validRefs.Count == 0)
+                        {
+                            skipAssemblyMap.Add(assemblyName);
+                            dependenciesOfSkipAssemblies.Remove(assemblyName);
+                            changedOnce = true;
+                        }
+                    }
+                }
+            }
+            while (changedOnce);
+
+            return skipAssemblyMap.OrderBy(x => x).ToHashSet(StringComparer.OrdinalIgnoreCase);
         }
 
         [DebuggerDisplay("{DirectRefNodes.Count} {IndirectRefCount}")]
@@ -169,10 +229,9 @@ namespace MigrationUtils
             };
         }
 
-        private static bool ShouldSkip(string assemblyName, string[] skipAssemblies)
+        private static bool ShouldSkip(string assemblyName, HashSet<string> skipAssemblies)
         {
-            return skipAssemblies
-                .Any(x2 => assemblyName.StartsWith(x2, StringComparison.OrdinalIgnoreCase));
+            return skipAssemblies.Contains(assemblyName);
         }
     }
 }
